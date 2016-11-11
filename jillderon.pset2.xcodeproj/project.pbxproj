@@ -20,6 +20,7 @@
 		A04543F51DD616620059E237 /* madlib2_university.txt in Resources */ = {isa = PBXBuildFile; fileRef = A04543ED1DD616620059E237 /* madlib2_university.txt */; };
 		A04543F61DD616620059E237 /* madlib3_clothes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A04543EE1DD616620059E237 /* madlib3_clothes.txt */; };
 		A04543F71DD616620059E237 /* madlib4_dance.txt in Resources */ = {isa = PBXBuildFile; fileRef = A04543EF1DD616620059E237 /* madlib4_dance.txt */; };
+		A04543FB1DD6358A0059E237 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A04543FA1DD6358A0059E237 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A04543ED1DD616620059E237 /* madlib2_university.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib2_university.txt; sourceTree = "<group>"; };
 		A04543EE1DD616620059E237 /* madlib3_clothes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib3_clothes.txt; sourceTree = "<group>"; };
 		A04543EF1DD616620059E237 /* madlib4_dance.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib4_dance.txt; sourceTree = "<group>"; };
+		A04543FA1DD6358A0059E237 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				A0254CE61DD11B5E008F8542 /* ThirdViewController.swift */,
 				A0254CD71DD0B9F6008F8542 /* Assets.xcassets */,
 				A04543E61DD5F8900059E237 /* Main.storyboard */,
+				A04543FA1DD6358A0059E237 /* README.md */,
 				A0254CD91DD0B9F6008F8542 /* LaunchScreen.storyboard */,
 				A0254CDC1DD0B9F6008F8542 /* Info.plist */,
 			);
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04543FB1DD6358A0059E237 /* README.md in Sources */,
 				A0254CE51DD11B48008F8542 /* SecondViewController.swift in Sources */,
 				A0254CD31DD0B9F6008F8542 /* ViewController.swift in Sources */,
 				A0254CE71DD11B5E008F8542 /* ThirdViewController.swift in Sources */,
