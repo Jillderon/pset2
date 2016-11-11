@@ -14,7 +14,6 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var dataInputField: UITextField!
     @IBOutlet weak var wordsLeft: UILabel!
-    @IBOutlet weak var fillIn: UILabel!
     @IBOutlet weak var nextWord: UIButton!
     @IBOutlet weak var OK: UIButton!
 
@@ -24,6 +23,7 @@ class SecondViewController: UIViewController {
         
         loadStory()
         OK.isHidden = true
+        dataInputField.placeholder = story.getNextPlaceholder()
         
     }
     
@@ -42,35 +42,38 @@ class SecondViewController: UIViewController {
 
     @IBAction func actionNextword(_ sender: UIButton) {
         if story.isFilledIn() == false {
-            story.fillInPlaceholder(word: dataInputField.text!)
+            if dataInputField.text == "" {
+                return
+            }
+            else {
+                story.fillInPlaceholder(word: dataInputField.text!)
+                dataInputField.text = ""
+                dataInputField.placeholder = story.getNextPlaceholder()
+                if story.getPlaceholderRemainingCount() != 0 {
+                    wordsLeft.text = String(story.getPlaceholderRemainingCount()) + " words left"
+                    OK.isHidden = true
+                }
+                else {
+                    wordsLeft.text = "Done! Click on OK!"
+                    nextWord.isHidden = true
+                    OK.isHidden = false
+                    dataInputField.isHidden = true
+                }
+
+            }
             
         }
         
-        print(story.toString())
     }
     
-   
-//
-//            if story.getPlaceholderRemainingCount() != 0 {
-//                wordsLeft.text = String(story.getPlaceholderRemainingCount()) + "words left"
-//                OK.isHidden = true
-//            }
-//            else {
-//                wordsLeft.text = "Done! Click on OK!"
-//                nextWord.isHidden = true
-//                OK.isHidden = false
-//            }
-//
-//    
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let thirdVC = segue.destination as? ThirdViewController {
-////            code
-//        }
-//        
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let thirdVC = segue.destination as? ThirdViewController {
+            thirdVC.storyuser = story.toString()
+        }
+        
+    }
 
- 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

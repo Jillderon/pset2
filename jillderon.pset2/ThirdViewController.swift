@@ -10,14 +10,23 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
-    
+    var story: Story!
+    var storyuser: String?
     @IBOutlet weak var textField: UITextView!
-    
 
+    @IBOutlet weak var StartAgain: UIButton!
+
+    @IBAction func actionClear(_ sender: Any) {
+        if StartAgain.isSelected == true {
+            story.clear()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        textField.text = storyuser
     }
 
     override func didReceiveMemoryWarning() {
