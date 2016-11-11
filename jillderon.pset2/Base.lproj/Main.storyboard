@@ -111,56 +111,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill in the words to complete the story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRT-xE-Ssa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in the words to complete the story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRT-xE-Ssa">
                                 <rect key="frame" x="24" y="72" width="328" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Bxc-Um-fnk"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word(s) left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSQ-FD-1kn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="word(s) left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSQ-FD-1kn">
                                 <rect key="frame" x="144.5" y="114" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7x-xX-Wdm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7x-xX-Wdm">
                                 <rect key="frame" x="91" y="148.5" width="194" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-EJ-Xnc">
-                                <rect key="frame" x="142.5" y="186.5" width="91" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="29Z-LY-av8"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-EJ-Xnc">
+                                <rect key="frame" x="142" y="368" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
-                                    <action selector="OKaction:" destination="PUO-53-zlS" eventType="touchUpInside" id="aOy-e4-cDX"/>
                                     <segue destination="eh4-0h-PJi" kind="show" id="tie-FR-psD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgW-CB-QYc">
+                                <rect key="frame" x="151" y="220" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next Word"/>
+                                <connections>
+                                    <action selector="actionNextword:" destination="PUO-53-zlS" eventType="touchUpInside" id="U5V-p0-6dw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in a .." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ad-GR-mhh">
+                                <rect key="frame" x="155" y="186" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fSQ-FD-1kn" firstAttribute="centerX" secondItem="B7x-xX-Wdm" secondAttribute="centerX" id="7wg-jS-btw"/>
-                            <constraint firstItem="pRT-xE-Ssa" firstAttribute="centerX" secondItem="fSQ-FD-1kn" secondAttribute="centerX" id="Dd5-b7-30I"/>
-                            <constraint firstItem="fSQ-FD-1kn" firstAttribute="centerX" secondItem="AbS-EJ-Xnc" secondAttribute="centerX" id="WgI-fF-wm7"/>
-                            <constraint firstItem="AbS-EJ-Xnc" firstAttribute="top" secondItem="B7x-xX-Wdm" secondAttribute="bottom" constant="8" symbolic="YES" id="brL-i2-Uue"/>
-                            <constraint firstItem="B7x-xX-Wdm" firstAttribute="leading" secondItem="Jxa-4i-88G" secondAttribute="leadingMargin" constant="75" id="fNd-Of-xj7"/>
-                            <constraint firstItem="pRT-xE-Ssa" firstAttribute="leading" secondItem="Jxa-4i-88G" secondAttribute="leadingMargin" constant="8" id="gAX-Lp-cyH"/>
-                            <constraint firstItem="fSQ-FD-1kn" firstAttribute="top" secondItem="pRT-xE-Ssa" secondAttribute="bottom" constant="21" id="gd3-rl-syw"/>
-                            <constraint firstItem="B7x-xX-Wdm" firstAttribute="top" secondItem="fSQ-FD-1kn" secondAttribute="bottom" constant="14" id="pFC-gS-WuG"/>
-                            <constraint firstItem="pRT-xE-Ssa" firstAttribute="top" secondItem="f7n-Zo-dsT" secondAttribute="bottom" constant="8" symbolic="YES" id="wOf-ly-XWx"/>
-                            <constraint firstItem="pRT-xE-Ssa" firstAttribute="centerX" secondItem="Jxa-4i-88G" secondAttribute="centerX" id="xAx-6y-dFT"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="OK" destination="AbS-EJ-Xnc" id="5T5-A1-dyE"/>
+                        <outlet property="OK" destination="AbS-EJ-Xnc" id="IxH-l4-GrJ"/>
                         <outlet property="dataInputField" destination="B7x-xX-Wdm" id="2N8-6D-h63"/>
+                        <outlet property="fillIn" destination="3ad-GR-mhh" id="d4A-xH-lXk"/>
+                        <outlet property="nextWord" destination="ZgW-CB-QYc" id="ixg-tF-mvt"/>
                         <outlet property="wordsLeft" destination="fSQ-FD-1kn" id="UV4-zJ-BxB"/>
                     </connections>
                 </viewController>
@@ -210,7 +212,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kad-uf-gm0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="taJ-Cy-q0j">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="taJ-Cy-q0j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
